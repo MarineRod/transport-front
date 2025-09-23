@@ -124,4 +124,7 @@ export class ServiceVehicleBookingListTableComponent {
     this.selectedBooking = null;
     this.selectedVehicle = null;
   }
+  isBookingEditable(booking: ServiceVehicleBooking): boolean {
+  return new Date(booking.dateTimeEnd) > new Date();
+}
 }
